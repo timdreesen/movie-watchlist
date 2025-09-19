@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background: #121212;
+  color: #222;
+  line-height: 1.5;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  height: 300px;
+  background-size: contain;
+  background-color: #0e0e0e;
+  position: relative;
+  padding: 5em;
+  align-items: center;
+  overflow: visible;
+  flex-wrap: wrap;
+}
+
+header form {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 87%;
+  margin: 0;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  border: none;
+  gap: 0;
+  background-color: #2e2e2f;
+  box-shadow: 0 0 15px rgba(145, 136, 136, 0.4);
+}
+header form input {
+  width: 80%;
+  padding: 0.75em 1em;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background-color: #2e2e2f;
+  /* margin-right: -1px; */
+  color: #a5a5a5;
+  font-size: 2em;
+}
+header form input:focus {
+  outline: none; /* remove the default outline ring */
+  box-shadow: none; /* remove any glow/shadow (Safari/Chrome) */
+  border-color: inherit; /* prevent border color changes */
+  background-color: inherit; /* prevent background changes */
+}
+header form button {
+  width: 20%;
+  border-radius: 0 10px 10px 0;
+  background-color: #4b4b4b;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+header form:focus-within {
+  outline: 1px solid #55c8fd; /* example: match default focus outline */
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/heroimg.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  flex: 1;
+}
+header h2 a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  border: 2px solid #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+header h2 a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+#movie-list {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+.movie-card {
+  width: 83%;
+  padding: 1.8em 0;
+  border-bottom: #2c2c2c solid 2px;
+  display: flex;
+}
+.movie-card .poster {
+  max-width: 175px;
+  aspect-ratio: 300 / 465;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(253, 242, 242, 0.4);
+}
+.movie-card h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  font-size: 1.1rem;
+  align-self: flex-end;
+  margin-bottom: 0.3em;
+}
+.ratings p {
+  display: inline;
+}
+.movie-card .ratings img {
+  width: 15px;
+}
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.text-wrapper {
+  padding: 1.5em 2.5em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1em;
+}
+.movie-card .info-wrapper {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3em;
+}
+.movie-card .btn-wrapper {
+  margin-left: auto;
+}
+.movie-card .runtime {
+  padding: 0.5em 0;
+}
+.movie-card .genre {
+  padding: 0.5em 0;
+}
+.movie-card button {
+  background: transparent;
+  border: none;
+  display: flex;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  gap: 0.5em;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+}
+.movie-card button:active {
+  transform: scale(0.97); /* slightly shrink */
+  background-color: #1a1919; /* a bit darker */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset; /* inner shadow for depth */
+}
+.movie-card button img {
+  background: transparent;
+  width: 25px;
+}
+
+.movie-card .plot {
+  font-size: 1.4rem;
+  color: #a5a5a5;
+}
