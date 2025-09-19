@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function fetchResults(searchInput) {
   const res = await fetch(
-    `http://www.omdbapi.com/?s=${searchInput}&apikey=${apiKey}`
+    `https://www.omdbapi.com/?s=${searchInput}&apikey=${apiKey}`
   );
   const data = await res.json();
   console.log(data);
@@ -59,7 +59,7 @@ async function fetchResults(searchInput) {
 }
 
 async function fetchMovieById(id) {
-  const res = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=${apiKey}`);
+  const res = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=${apiKey}`);
   const data = await res.json();
   console.log(data);
   currentResultArray.push(data);
