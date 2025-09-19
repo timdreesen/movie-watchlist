@@ -27,7 +27,7 @@ document.addEventListener("click", function (e) {
     console.log("trying to run removeFromWatchlist");
     removeFromWatchlist(id);
 
-    if (window.location.pathname.endsWith("watchlist.html")) {
+    if (window.location.pathname.endsWith("watchlist")) {
       const card = document
         .getElementById(`btn-wrapper-${id}`)
         ?.closest(".movie-card");
@@ -37,7 +37,7 @@ document.addEventListener("click", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname.endsWith("watchlist.html")) {
+  if (window.location.pathname.endsWith("watchlist")) {
     console.log("On watchlist.html");
     let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
     console.log(watchlist);
